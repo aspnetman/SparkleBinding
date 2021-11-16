@@ -169,7 +169,7 @@ namespace Sparkle
 
 	// @interface SUStandardVersionComparator : NSObject <SUVersionComparison>
 	[BaseType(typeof(NSObject))]
-	interface SUStandardVersionComparator : SUVersionComparison
+	interface SUStandardVersionComparator
 	{
 		// @property (readonly, nonatomic, class) SUStandardVersionComparator * _Nonnull defaultComparator;
 		[Static]
@@ -179,9 +179,6 @@ namespace Sparkle
 		// -(NSComparisonResult)compareVersion:(NSString * _Nonnull)versionA toVersion:(NSString * _Nonnull)versionB;
 		[Export("compareVersion:toVersion:")]
 		NSComparisonResult CompareVersion(string versionA, string versionB);
-
-		[Export("compareVersion:toVersion:")]
-		NSComparisonResult ToVersion(string versionA, string versionB);
 	}
 
 	// @interface SPUUserUpdateState : NSObject
